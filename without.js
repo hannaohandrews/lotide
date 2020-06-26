@@ -26,7 +26,7 @@ const assertArraysEqual = function(arrayOne ,arrayTwo){
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-console.log( 'words =' , words)
+console.log( 'words =' ,words)
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
   //This function should take in a source array and a itemsToRemove array. 

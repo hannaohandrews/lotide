@@ -26,12 +26,12 @@ const assertArraysEqual = function(arrayOne, arrayTwo){
 
   for (let i = 0 ; i < arrayOne.length ; i++) {
     if (arrayOne[i] === arrayTwo[i]){
-      outcome = `✅✅✅ Assertion Passed: ${actual} ===  ${expected}` 
+      outcome = `✅✅✅ Assertion Passed: ${arrayOne} ===  ${arrayTwo}` 
     } else {
-      outcome = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`
+      outcome = `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`
     }
     
-  }return output
+  }return outcome
 }
 
 
