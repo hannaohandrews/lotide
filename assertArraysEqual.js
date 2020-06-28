@@ -21,17 +21,16 @@ const eqArrays = (arrayOne, arrayTwo) => {
   } return outcome
 }
 
-const assertArraysEqual = function(arrayOne, arrayTwo){
-  let outcome ;
-
-  for (let i = 0 ; i < arrayOne.length ; i++) {
-    if (arrayOne[i] === arrayTwo[i]){
-      outcome = `✅✅✅ Assertion Passed: ${arrayOne} ===  ${arrayTwo}` 
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  let outcome;
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] === arrayTwo[i]) {
+      outcome = `✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`;
     } else {
-      outcome = `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`
+      outcome = `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`;
     }
-    
-  }return outcome
-}
+  } return outcome;
+};
+
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => should PASS
