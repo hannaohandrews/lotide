@@ -1,18 +1,24 @@
 //Implement middle which will take in an array and return the middle-most element(s) of the given array.
+const eqArrays = (arrayOne, arrayTwo) => {
+  let outcome = "";
 
-const assertArraysEqual = function(arrayOne ,arrayTwo){
-  let outcome = true;
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] === arrayTwo[i]) {
+      outcome = true;
+    } else {
+      return false;
+    }
+  } return outcome;
+};
 
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  } 
-  for (let i = 0 ; i < arrayOne.length ; i++) {
-   if (arrayOne[i] !== arrayTwo[i]){
-     return false;
-   } 
-  } return true 
-}
 
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  if (eqArrays(arrayOne,arrayTwo)) {
+    return `✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`;
+  } else {
+    return `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`;
+  }
+};
 
 // ACTUAL FUNCTION
 const middle = function(arrays) {
@@ -31,14 +37,12 @@ const middle = function(arrays) {
       middle = arrays.length/2
       evenArray.push(arrays[middle-1]);
       evenArray.push(arrays[middle]);
-      return evenArray
+      return evenArray;
     }
-}
+};
 
+console.log(middle([1, 2 ,3]))
 
-console.log(middle([1]))
-console.log(middle([1, 2]))
-console.log(middle([1, 2, 3]))
-console.log(middle([1, 2, 3, 4, 5]))
-console.log(middle([1, 2, 3, 4, 5, 6]))
+console.log(assertArraysEqual(middle([1, 2 ,3]),[2]));
 
+module.exports = middle;
