@@ -1,7 +1,6 @@
 // FUNCTION IMPLEMENTATION
 
 const assertEqual = function(actual, expected) {
-
   if (actual === expected) {
     console.log( `✅✅✅ Assertion Passed: ${actual} ===  ${expected}` )
   } else {
@@ -16,21 +15,24 @@ const eqArrays = (arrayOne, arrayTwo) => {
     if (arrayOne[i] === arrayTwo[i]){
       outcome = true 
     } else {
-      outcome = false 
+      return false 
     }
   } return outcome
 }
 
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  let outcome;
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] === arrayTwo[i]) {
-      outcome = `✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`;
+
+    if (eqArrays(arrayOne,arrayTwo)) {
+       return `✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`;
     } else {
-      outcome = `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`;
-    }
-  } return outcome;
+      return `🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`;
+    } 
 };
 
+let answer = eqArrays([1, 2, 3],[1, 2, 3]) // => true
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => should PASS
+console.log(assertArraysEqual([1, 2, 3],[1, 2, 3]) );
+
+
+module.exports = assertArraysEqual;
+
