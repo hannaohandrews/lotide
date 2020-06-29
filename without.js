@@ -24,11 +24,7 @@ const assertArraysEqual = function(arrayOne ,arrayTwo){
 
 
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
+without(words, ["lighthouse"]);
+
 console.log( 'words =' ,words)
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
-  //This function should take in a source array and a itemsToRemove array. 
-  //It should return a new array with only those elements from source that are not present in the itemsToRemove array.
-  //Implement without which will return a subset of a given array, removing unwanted elements.
