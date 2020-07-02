@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 
 // FUNCTION IMPLEMENTATION
@@ -9,13 +9,10 @@ var first = array[0]
 return first
 }
 
-
-  
-
 module.exports = head;
 
 
-// TEST CODE
+// // TEST CODE
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+// assertEqual(head([5,6,7]), 5);
+// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
